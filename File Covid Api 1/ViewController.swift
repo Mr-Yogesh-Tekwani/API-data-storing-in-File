@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        storeAPIData(api: "https://pomber.github.io/covid19/timeseries.json", completionHandler: { ans in
+        storeAPIData(api: "https://api.covidtracking.com/v1/states/daily.json", completionHandler: { ans in
             if ans{
                 readFromFile(completionHandler: { data in
                     print(data?.count)
